@@ -1,0 +1,906 @@
+{
+  "apps": [
+    {
+      "id": "app_1780655922167_5q9mpr",
+      "name": "School Management System",
+      "description": "A platform for managing student records and results",
+      "prompt": "School Management system, with student records and results",
+      "config": {
+        "name": "School Management System",
+        "description": "A platform for managing student records and results",
+        "theme": {
+          "primaryColor": "#3498db",
+          "accentColor": "#f1c40f"
+        },
+        "pages": [
+          {
+            "id": "page_1",
+            "name": "Dashboard",
+            "icon": "🏫",
+            "components": [
+              {
+                "id": "stats_1",
+                "type": "stats",
+                "title": "Overview",
+                "stats": [
+                  {
+                    "label": "Total Students",
+                    "value": "12,450",
+                    "change": "+8.2%",
+                    "trend": "up",
+                    "icon": "👧"
+                  },
+                  {
+                    "label": "Total Teachers",
+                    "value": "230",
+                    "change": "+5.5%",
+                    "trend": "up",
+                    "icon": "👨‍🏫"
+                  },
+                  {
+                    "label": "Passing Rate",
+                    "value": "92.1%",
+                    "change": "+0.8%",
+                    "trend": "up",
+                    "icon": "⭐"
+                  },
+                  {
+                    "label": "Average GPA",
+                    "value": "3.4",
+                    "change": "+0.2%",
+                    "trend": "up",
+                    "icon": "📚"
+                  }
+                ]
+              },
+              {
+                "id": "chart_1",
+                "type": "chart",
+                "title": "Student Enrollment",
+                "chart": {
+                  "type": "line",
+                  "dataKey": "enrollment",
+                  "xAxis": "year",
+                  "data": [
+                    {
+                      "year": "2018",
+                      "enrollment": 10000
+                    },
+                    {
+                      "year": "2019",
+                      "enrollment": 11000
+                    },
+                    {
+                      "year": "2020",
+                      "enrollment": 12000
+                    },
+                    {
+                      "year": "2021",
+                      "enrollment": 13000
+                    },
+                    {
+                      "year": "2022",
+                      "enrollment": 14000
+                    },
+                    {
+                      "year": "2023",
+                      "enrollment": 15000
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "page_2",
+            "name": "Student Records",
+            "icon": "📁",
+            "components": [
+              {
+                "id": "table_1",
+                "type": "table",
+                "title": "Student List",
+                "columns": [
+                  {
+                    "id": "c1",
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c2",
+                    "key": "grade",
+                    "label": "Grade",
+                    "type": "text",
+                    "sortable": false
+                  },
+                  {
+                    "id": "c3",
+                    "key": "gpa",
+                    "label": "GPA",
+                    "type": "number",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c4",
+                    "key": "status",
+                    "label": "Status",
+                    "type": "badge",
+                    "sortable": true
+                  }
+                ],
+                "data": [
+                  {
+                    "name": "John Doe",
+                    "grade": "10th",
+                    "gpa": 3.5,
+                    "status": "Active"
+                  },
+                  {
+                    "name": "Jane Smith",
+                    "grade": "11th",
+                    "gpa": 3.8,
+                    "status": "Active"
+                  },
+                  {
+                    "name": "Bob Johnson",
+                    "grade": "12th",
+                    "gpa": 3.2,
+                    "status": "Inactive"
+                  },
+                  {
+                    "name": "Alice Brown",
+                    "grade": "9th",
+                    "gpa": 3.9,
+                    "status": "Active"
+                  },
+                  {
+                    "name": "Mike Davis",
+                    "grade": "10th",
+                    "gpa": 3.1,
+                    "status": "Active"
+                  }
+                ]
+              },
+              {
+                "id": "form_1",
+                "type": "form",
+                "title": "Add New Student",
+                "fields": [
+                  {
+                    "id": "f1",
+                    "name": "name",
+                    "label": "Full Name",
+                    "type": "text",
+                    "placeholder": "John Doe",
+                    "required": true
+                  },
+                  {
+                    "id": "f2",
+                    "name": "grade",
+                    "label": "Grade",
+                    "type": "select",
+                    "required": false,
+                    "options": [
+                      {
+                        "label": "9th",
+                        "value": "9th"
+                      },
+                      {
+                        "label": "10th",
+                        "value": "10th"
+                      },
+                      {
+                        "label": "11th",
+                        "value": "11th"
+                      },
+                      {
+                        "label": "12th",
+                        "value": "12th"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "f3",
+                    "name": "gpa",
+                    "label": "GPA",
+                    "type": "number",
+                    "required": true
+                  },
+                  {
+                    "id": "f4",
+                    "name": "status",
+                    "label": "Status",
+                    "type": "toggle",
+                    "required": false
+                  }
+                ],
+                "submitLabel": "Save"
+              }
+            ]
+          },
+          {
+            "id": "page_3",
+            "name": "Results",
+            "icon": "📊",
+            "components": [
+              {
+                "id": "table_2",
+                "type": "table",
+                "title": "Exam Results",
+                "columns": [
+                  {
+                    "id": "c5",
+                    "key": "student",
+                    "label": "Student",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c6",
+                    "key": "subject",
+                    "label": "Subject",
+                    "type": "text",
+                    "sortable": false
+                  },
+                  {
+                    "id": "c7",
+                    "key": "score",
+                    "label": "Score",
+                    "type": "number",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c8",
+                    "key": "grade",
+                    "label": "Grade",
+                    "type": "text",
+                    "sortable": true
+                  }
+                ],
+                "data": [
+                  {
+                    "student": "John Doe",
+                    "subject": "Math",
+                    "score": 85,
+                    "grade": "B"
+                  },
+                  {
+                    "student": "Jane Smith",
+                    "subject": "Science",
+                    "score": 90,
+                    "grade": "A"
+                  },
+                  {
+                    "student": "Bob Johnson",
+                    "subject": "English",
+                    "score": 78,
+                    "grade": "C"
+                  },
+                  {
+                    "student": "Alice Brown",
+                    "subject": "History",
+                    "score": 92,
+                    "grade": "A"
+                  },
+                  {
+                    "student": "Mike Davis",
+                    "subject": "Geography",
+                    "score": 88,
+                    "grade": "B"
+                  }
+                ]
+              },
+              {
+                "id": "chart_2",
+                "type": "chart",
+                "title": "Student Performance",
+                "chart": {
+                  "type": "bar",
+                  "dataKey": "score",
+                  "xAxis": "student",
+                  "data": [
+                    {
+                      "student": "John Doe",
+                      "score": 85
+                    },
+                    {
+                      "student": "Jane Smith",
+                      "score": 90
+                    },
+                    {
+                      "student": "Bob Johnson",
+                      "score": 78
+                    },
+                    {
+                      "student": "Alice Brown",
+                      "score": 92
+                    },
+                    {
+                      "student": "Mike Davis",
+                      "score": 88
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "page_4",
+            "name": "Reports",
+            "icon": "📝",
+            "components": [
+              {
+                "id": "list_1",
+                "type": "list",
+                "title": "Top Performing Students",
+                "data": [
+                  {
+                    "id": "i1",
+                    "title": "Alice Brown",
+                    "description": "Average score: 92",
+                    "icon": "🥇",
+                    "value": "92%"
+                  },
+                  {
+                    "id": "i2",
+                    "title": "Jane Smith",
+                    "description": "Average score: 90",
+                    "icon": "🥈",
+                    "value": "90%"
+                  },
+                  {
+                    "id": "i3",
+                    "title": "Mike Davis",
+                    "description": "Average score: 88",
+                    "icon": "🥉",
+                    "value": "88%"
+                  }
+                ]
+              },
+              {
+                "id": "gallery_1",
+                "type": "gallery",
+                "title": "School Events"
+              }
+            ]
+          }
+        ],
+        "navigation": [
+          {
+            "label": "Dashboard",
+            "path": "/",
+            "icon": "🏫"
+          },
+          {
+            "label": "Student Records",
+            "path": "/students",
+            "icon": "📁"
+          },
+          {
+            "label": "Results",
+            "path": "/results",
+            "icon": "📊"
+          },
+          {
+            "label": "Reports",
+            "path": "/reports",
+            "icon": "📝"
+          }
+        ]
+      },
+      "status": "active",
+      "createdAt": "2026-06-05T10:38:42.167Z",
+      "updatedAt": "2026-06-05T10:38:42.167Z"
+    },
+    {
+      "id": "app_1780655964740_ski80j",
+      "name": "HR Management System",
+      "description": "A comprehensive platform for managing employee data, leave tracking, and payroll overview",
+      "prompt": "HR management system with employee profiles, leave tracker and payroll overview",
+      "config": {
+        "name": "HR Management System",
+        "description": "A comprehensive platform for managing employee data, leave tracking, and payroll overview",
+        "theme": {
+          "primaryColor": "#3498db",
+          "accentColor": "#f1c40f"
+        },
+        "pages": [
+          {
+            "id": "page_1",
+            "name": "Dashboard",
+            "icon": "🏠",
+            "components": [
+              {
+                "id": "stats_1",
+                "type": "stats",
+                "title": "Overview",
+                "stats": [
+                  {
+                    "label": "Total Employees",
+                    "value": "250",
+                    "change": "+5%",
+                    "trend": "up",
+                    "icon": "👥"
+                  },
+                  {
+                    "label": "Active Leave Requests",
+                    "value": "15",
+                    "change": "+2%",
+                    "trend": "up",
+                    "icon": "📆"
+                  },
+                  {
+                    "label": "Payroll Balance",
+                    "value": "$120,000",
+                    "change": "-3%",
+                    "trend": "down",
+                    "icon": "💸"
+                  },
+                  {
+                    "label": "Employee Satisfaction",
+                    "value": "85%",
+                    "change": "+1%",
+                    "trend": "up",
+                    "icon": "⭐"
+                  }
+                ]
+              },
+              {
+                "id": "hero_1",
+                "type": "hero",
+                "title": "Welcome to HR Management System",
+                "description": "Manage employee data, track leave requests, and oversee payroll with ease",
+                "submitLabel": "Explore Employee Profiles"
+              }
+            ]
+          },
+          {
+            "id": "page_2",
+            "name": "Employee Profiles",
+            "icon": "👥",
+            "components": [
+              {
+                "id": "table_1",
+                "type": "table",
+                "title": "Employee List",
+                "columns": [
+                  {
+                    "id": "c1",
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c2",
+                    "key": "email",
+                    "label": "Email",
+                    "type": "text",
+                    "sortable": false
+                  },
+                  {
+                    "id": "c3",
+                    "key": "department",
+                    "label": "Department",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c4",
+                    "key": "jobTitle",
+                    "label": "Job Title",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c5",
+                    "key": "hireDate",
+                    "label": "Hire Date",
+                    "type": "date",
+                    "sortable": true
+                  }
+                ],
+                "data": [
+                  {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com",
+                    "department": "Sales",
+                    "jobTitle": "Sales Manager",
+                    "hireDate": "2020-01-01"
+                  },
+                  {
+                    "name": "Jane Smith",
+                    "email": "jane.smith@example.com",
+                    "department": "Marketing",
+                    "jobTitle": "Marketing Manager",
+                    "hireDate": "2019-06-01"
+                  },
+                  {
+                    "name": "Bob Johnson",
+                    "email": "bob.johnson@example.com",
+                    "department": "IT",
+                    "jobTitle": "Software Engineer",
+                    "hireDate": "2018-03-01"
+                  },
+                  {
+                    "name": "Alice Brown",
+                    "email": "alice.brown@example.com",
+                    "department": "HR",
+                    "jobTitle": "HR Manager",
+                    "hireDate": "2017-09-01"
+                  },
+                  {
+                    "name": "Mike Davis",
+                    "email": "mike.davis@example.com",
+                    "department": "Finance",
+                    "jobTitle": "Financial Analyst",
+                    "hireDate": "2016-01-01"
+                  }
+                ]
+              },
+              {
+                "id": "form_1",
+                "type": "form",
+                "title": "Add New Employee",
+                "fields": [
+                  {
+                    "id": "f1",
+                    "name": "name",
+                    "label": "Full Name",
+                    "type": "text",
+                    "placeholder": "John Doe",
+                    "required": true
+                  },
+                  {
+                    "id": "f2",
+                    "name": "email",
+                    "label": "Email",
+                    "type": "email",
+                    "required": true
+                  },
+                  {
+                    "id": "f3",
+                    "name": "department",
+                    "label": "Department",
+                    "type": "select",
+                    "required": false,
+                    "options": [
+                      {
+                        "label": "Sales",
+                        "value": "sales"
+                      },
+                      {
+                        "label": "Marketing",
+                        "value": "marketing"
+                      },
+                      {
+                        "label": "IT",
+                        "value": "it"
+                      },
+                      {
+                        "label": "HR",
+                        "value": "hr"
+                      },
+                      {
+                        "label": "Finance",
+                        "value": "finance"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "f4",
+                    "name": "jobTitle",
+                    "label": "Job Title",
+                    "type": "text",
+                    "required": false
+                  },
+                  {
+                    "id": "f5",
+                    "name": "hireDate",
+                    "label": "Hire Date",
+                    "type": "date",
+                    "required": false
+                  }
+                ],
+                "submitLabel": "Save"
+              }
+            ]
+          },
+          {
+            "id": "page_3",
+            "name": "Leave Tracker",
+            "icon": "📆",
+            "components": [
+              {
+                "id": "table_2",
+                "type": "table",
+                "title": "Leave Requests",
+                "columns": [
+                  {
+                    "id": "c1",
+                    "key": "employeeName",
+                    "label": "Employee Name",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c2",
+                    "key": "leaveType",
+                    "label": "Leave Type",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c3",
+                    "key": "startDate",
+                    "label": "Start Date",
+                    "type": "date",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c4",
+                    "key": "endDate",
+                    "label": "End Date",
+                    "type": "date",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c5",
+                    "key": "status",
+                    "label": "Status",
+                    "type": "badge",
+                    "sortable": true
+                  }
+                ],
+                "data": [
+                  {
+                    "employeeName": "John Doe",
+                    "leaveType": "Vacation",
+                    "startDate": "2024-03-01",
+                    "endDate": "2024-03-05",
+                    "status": "Approved"
+                  },
+                  {
+                    "employeeName": "Jane Smith",
+                    "leaveType": "Sick Leave",
+                    "startDate": "2024-02-20",
+                    "endDate": "2024-02-22",
+                    "status": "Pending"
+                  },
+                  {
+                    "employeeName": "Bob Johnson",
+                    "leaveType": "Family Leave",
+                    "startDate": "2024-01-15",
+                    "endDate": "2024-01-20",
+                    "status": "Denied"
+                  },
+                  {
+                    "employeeName": "Alice Brown",
+                    "leaveType": "Vacation",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-05",
+                    "status": "Approved"
+                  },
+                  {
+                    "employeeName": "Mike Davis",
+                    "leaveType": "Sick Leave",
+                    "startDate": "2024-03-10",
+                    "endDate": "2024-03-12",
+                    "status": "Pending"
+                  }
+                ]
+              },
+              {
+                "id": "form_2",
+                "type": "form",
+                "title": "Request Leave",
+                "fields": [
+                  {
+                    "id": "f1",
+                    "name": "employeeName",
+                    "label": "Employee Name",
+                    "type": "text",
+                    "placeholder": "John Doe",
+                    "required": true
+                  },
+                  {
+                    "id": "f2",
+                    "name": "leaveType",
+                    "label": "Leave Type",
+                    "type": "select",
+                    "required": false,
+                    "options": [
+                      {
+                        "label": "Vacation",
+                        "value": "vacation"
+                      },
+                      {
+                        "label": "Sick Leave",
+                        "value": "sickLeave"
+                      },
+                      {
+                        "label": "Family Leave",
+                        "value": "familyLeave"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "f3",
+                    "name": "startDate",
+                    "label": "Start Date",
+                    "type": "date",
+                    "required": true
+                  },
+                  {
+                    "id": "f4",
+                    "name": "endDate",
+                    "label": "End Date",
+                    "type": "date",
+                    "required": true
+                  },
+                  {
+                    "id": "f5",
+                    "name": "reason",
+                    "label": "Reason",
+                    "type": "textarea",
+                    "required": false
+                  }
+                ],
+                "submitLabel": "Submit"
+              }
+            ]
+          },
+          {
+            "id": "page_4",
+            "name": "Payroll Overview",
+            "icon": "💸",
+            "components": [
+              {
+                "id": "chart_1",
+                "type": "chart",
+                "title": "Monthly Payroll",
+                "chart": {
+                  "type": "bar",
+                  "dataKey": "payroll",
+                  "xAxis": "month",
+                  "data": [
+                    {
+                      "month": "Jan",
+                      "payroll": 100000
+                    },
+                    {
+                      "month": "Feb",
+                      "payroll": 120000
+                    },
+                    {
+                      "month": "Mar",
+                      "payroll": 110000
+                    },
+                    {
+                      "month": "Apr",
+                      "payroll": 130000
+                    },
+                    {
+                      "month": "May",
+                      "payroll": 140000
+                    },
+                    {
+                      "month": "Jun",
+                      "payroll": 150000
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "table_3",
+                "type": "table",
+                "title": "Payroll Details",
+                "columns": [
+                  {
+                    "id": "c1",
+                    "key": "employeeName",
+                    "label": "Employee Name",
+                    "type": "text",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c2",
+                    "key": "salary",
+                    "label": "Salary",
+                    "type": "number",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c3",
+                    "key": "bonus",
+                    "label": "Bonus",
+                    "type": "number",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c4",
+                    "key": "tax",
+                    "label": "Tax",
+                    "type": "number",
+                    "sortable": true
+                  },
+                  {
+                    "id": "c5",
+                    "key": "netPay",
+                    "label": "Net Pay",
+                    "type": "number",
+                    "sortable": true
+                  }
+                ],
+                "data": [
+                  {
+                    "employeeName": "John Doe",
+                    "salary": 50000,
+                    "bonus": 10000,
+                    "tax": 15000,
+                    "netPay": 45000
+                  },
+                  {
+                    "employeeName": "Jane Smith",
+                    "salary": 60000,
+                    "bonus": 12000,
+                    "tax": 18000,
+                    "netPay": 54000
+                  },
+                  {
+                    "employeeName": "Bob Johnson",
+                    "salary": 70000,
+                    "bonus": 14000,
+                    "tax": 21000,
+                    "netPay": 63000
+                  },
+                  {
+                    "employeeName": "Alice Brown",
+                    "salary": 80000,
+                    "bonus": 16000,
+                    "tax": 24000,
+                    "netPay": 72000
+                  },
+                  {
+                    "employeeName": "Mike Davis",
+                    "salary": 90000,
+                    "bonus": 18000,
+                    "tax": 27000,
+                    "netPay": 81000
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "navigation": [
+          {
+            "label": "Dashboard",
+            "path": "/",
+            "icon": "🏠"
+          },
+          {
+            "label": "Employee Profiles",
+            "path": "/employees",
+            "icon": "👥"
+          },
+          {
+            "label": "Leave Tracker",
+            "path": "/leave",
+            "icon": "📆"
+          },
+          {
+            "label": "Payroll Overview",
+            "path": "/payroll",
+            "icon": "💸"
+          }
+        ]
+      },
+      "status": "active",
+      "createdAt": "2026-06-05T10:39:24.740Z",
+      "updatedAt": "2026-06-05T10:39:24.740Z"
+    }
+  ]
+}
